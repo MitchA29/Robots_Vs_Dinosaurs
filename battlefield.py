@@ -7,10 +7,10 @@ class Battlefield:
         self.herd = Herd()
 
     def run_game (self):
-        pass
+        Battlefield.display_welcome
 
     def display_welcome (self):
-        pass
+        print ("Welcome to Robots Vs. Dinosaurs")
 
     def battle (self):
         pass
