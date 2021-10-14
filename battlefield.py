@@ -30,39 +30,41 @@ class Battlefield:
             self.dino_turn (self.herd.dinosaurs[0])
             if self.fleet.robots [0].health <= 0:
                 print (self.herd.dinosaurs[0].name + " defeated " + self.fleet.robots[0].name)
-                self.fleet.robots.pop[0]
+                self.fleet.robots.pop(0)
                 if len(self.fleet.robots) == 0:
                     self.display_winners()
             self.robo_turn (self.fleet.robots[0])
             if self.herd.dinosaurs [0].health <= 0:
                 print (self.fleet.robots[0].name + " defeated " + self.herd.dinosaurs[0].name)
-                self.herd.dinosaurs.pop[0]
+                self.herd.dinosaurs.pop(0)
                 if len(self.herd.dinosaurs) == 0:
                     self.display_winners()
        
         
 
     def dino_turn (self, dinosaur):
-        print (str(dinosaur.name) + " attacks " + str(self.fleet.robots[0].name))
-        self.fleet.robots[0].health = self.fleet.robots[0].health - self.herd.dinosaurs[0].attack_power
+        print (str(dinosaur.name) + " attacks " + str(self.fleet.robots[0].name) + " for " + str(dinosaur.attack_power) + " damage!")
+        self.fleet.robots[0].health = self.fleet.robots[0].health - dinosaur.attack_power
 
 
     def robo_turn (self, robot):
-        print (str(robot.name) + " attacks " + str(self.herd.dinosaurs[0].name))
-        self.herd.dinosaurs[0].health = self.herd.dinosaurs[0].health - self.fleet.robots[0].weapon.attack_power
+        print (str(robot.name) + " attacks " + str(self.herd.dinosaurs[0].name) + " for " + str(robot.weapon.attack_power) + " damage!")
+        self.herd.dinosaurs[0].health = self.herd.dinosaurs[0].health - robot.weapon.attack_power
 
 
-    # def show_dino_opponent_options (self):
-    #     pass
+    def show_dino_opponent_options (self):
+        pass
 
-    # def show_robo_opponent_options (self):
-    #     pass
+    def show_robo_opponent_options (self):
+        pass
 
-    # def display_winners (self):
-    #     if (len(self.herd.dinosaurs == 0)):
-    #         print ("Robots win!")
-    #     elif (len(self.fleet.robots == 0)):
-    #         print ("Dinos win!")
-    #     else:
-    #         print ("Error with finding who wins.")
+    def display_winners (self):
+        if (len(self.herd.dinosaurs) == 0):
+            print ("Robots win!")
+            exit
+        elif (len(self.fleet.robots) == 0):
+            print ("Dinos win!")
+            exit
+        else:
+            print ("Error with finding who wins.")
         

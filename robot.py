@@ -8,9 +8,6 @@ class Robot:
         self.make_weapons()
         self.weapon = self.weapons[num]
         
-        
-        
-
     def attack (self, dinosaur):
         pass
 
