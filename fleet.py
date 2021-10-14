@@ -9,8 +9,8 @@ class Fleet:
         robot1 = Robot("Brenard", 100, 0)
         self.robots.append(robot1)
 
-        robot2 = Robot("Harry", 100, 1)
+        robot2 = Robot("Harry", 150, 1)
         self.robots.append(robot2)
 
-        robot3 = Robot("Jan", 100, 2)
+        robot3 = Robot("Jan", 115, 2)
         self.robots.append(robot3)
